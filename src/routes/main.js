@@ -17,10 +17,18 @@ router.get("/test", (req, res) => {
 
 })
 
-router.get("/under", (req, res) => {
+
+router.get("/protectedpath", (req, res) => {
 
     console.log(req)
-    res.sendFile(path.resolve(__dirname, "../views/under.html"))
+    res.sendFile(path.resolve(__dirname, "../views/protectedpath.html"))
+
+})
+
+router.get("/noprotectedpath", (req, res) => {
+
+    console.log(req)
+    res.sendFile(path.resolve(__dirname, "../views/noprotectedpath.html"))
 
 })
 
